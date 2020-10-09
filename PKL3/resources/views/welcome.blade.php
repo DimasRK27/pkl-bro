@@ -65,17 +65,35 @@
 </nav>
     
   <div class="d-flex" id="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-        </div>
 
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
+     <!-- Sidebar -->
+<!-- Overlay for fixed sidebar -->
+<!-- Overlay for fixed sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+    <!-- Sidebar header -->
+    <div class="sidebar-header header-cover" style="background-color: #3498DB ;">
+        <!-- Top bar -->
+        <div class="top-bar"></div>
+        <!-- Sidebar toggle button -->
+        <button type="button" class="sidebar-toggle">
+            <i class="icon-material-sidebar-arrow"></i>
+        </button>
+        <!-- Sidebar brand image -->
+        <div class="sidebar-image">
+            <img height="200" width="200" src="https://stmik-amikbandung.ac.id/wp-content/uploads/2019/01/LOGO-PNG.png">
+        </div>
+        <!-- Sidebar brand name -->
+        <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+            SPMI System
+            <b class="caret"></b>
+        </a>
+    </div>
+
+    <!-- Sidebar navigation -->
+  <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
                         <a href="#">Home 1</a>
                     </li>
@@ -111,16 +129,19 @@
                 <a href="#">Contact</a>
             </li>
         </ul>
-    </nav>
+</aside>
 
+<div class="wrapper">
+    <!-- Sidebar Constructor -->
+    <div class="constructor">
+        <h1>Dashboard</h1>
+
+       <p>
+       <button><a href="http://localhost/PKL3/resources/views/upload/HalamanUpload.blade.php">Untuk Upload Silahkan Disini</a></button></p>
+    </div>
 </div>
 
-
-
-
-        <!-- Dashboard -->
-       <h1>Dashboard</h1>
-       <button><a href="http://localhost/PKL3/resources/views/upload/HalamanUpload.blade.php">Untuk Upload Silahkan Disini</a></button>
+      
 
        <script>
     $(document).ready(function () {
