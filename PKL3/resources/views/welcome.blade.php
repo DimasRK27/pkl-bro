@@ -207,26 +207,16 @@
     <!-- Sidebar Constructor -->
         <h1><strong>Dashboard</strong></h1>
         <p>
-       <button><a href="http://localhost/PKL3/resources/views/artikel/sop.php">SOP</a></button>
+       <button><a href="http://localhost:8000/SOP">SOP</a></button>
 
-       <button><a href="http://localhost/PKL3/resources/views/artikel/panduan.php">Panduan</a></button>
+       <button><a href="http://localhost:8000/Panduan">Panduan</a></button>
 
-       <button><a href="http://localhost/PKL3/resources/views/artikel/standard.php">Standard</a></button></p>
+       <button><a href="http://localhost:8000/Standar">Standar</a></button></p>
 
        <p>
-       <button><a href="http://localhost/PKL3/resources/views/upload/HalamanUpload.blade.php">Untuk Upload Silahkan Disini</a></button></p>
+       <button><a href="http://localhost:8000/upload">Untuk Upload Silahkan Disini</a></button></p>
 </div>
 
       
-
-       <script>
-    $(document).ready(function () {
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
-
-});
-  </script>
     </body>
 </html>

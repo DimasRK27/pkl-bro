@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\upload;
+use App\Http\Controllers\SOP;
+use App\Http\Controllers\Standar;
+use App\Http\Controllers\Panduan; 
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("upload", [upload::Class,'index']);
+
+Route::get("SOP", [sop::Class,'index']);
+
+Route::get("Standar", [standar::Class,'index']);
+
+Route::get("Panduan", [panduan::Class,'index']);
+ 
