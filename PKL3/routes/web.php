@@ -21,11 +21,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("upload", [upload::Class,'index']);
+Route::get("upload", [upload::Class,'upload']);
 
-Route::get("SOP", [sop::Class,'index']);
+Route::get("SOP", [sop::Class,'SOP']);
 
-Route::get("Standar", [standar::Class,'index']);
+Route::get("Standar", [standar::Class,'Standar']);
 
-Route::get("Panduan", [panduan::Class,'index']);
- 
+Route::get("Panduan", [panduan::Class,'Panduan']);
+
+Route::post("/upload/proses",[UploadController::Class,'proses_upload ']);

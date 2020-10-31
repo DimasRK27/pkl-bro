@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class Standar extends Controller
 {
-      public function index(){
+      public function Standar(){
     	return view('artikel/standar');
     }
 }
