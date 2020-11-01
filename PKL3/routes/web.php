@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\upload;
-use App\Http\Controllers\SOP;
-use App\Http\Controllers\Standar;
-use App\Http\Controllers\Panduan; 
-
+use App\Http\Controllers\UploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,13 +16,11 @@ use App\Http\Controllers\Panduan;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get("upload", [upload::Class,'upload']);
+Route::view('upload','upload');
+Route::post('upload',[UploadController::class, 'upload']);
 
 Route::get("SOP", [sop::Class,'SOP']);
 
 Route::get("Standar", [standar::Class,'Standar']);
 
 Route::get("Panduan", [panduan::Class,'Panduan']);
-
-Route::post("/upload/proses",[UploadController::Class,'proses_upload ']);
