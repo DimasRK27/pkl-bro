@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Artikel;
+use App\Models\artikel;
 
 class UploadController extends Controller
 {
@@ -12,14 +12,21 @@ class UploadController extends Controller
     {
         $file = $req->file('file');
         $file -> move('data_file', $file -> getClientOriginalName());
+        $filename = $file -> getClientOriginalName();
+        // $Artikel = new artikel;
+    	// $Artikel ->Nama_Artikel=$req->nama;
+    	// $Artikel ->Jenis =$req->JenisFile;
+        // $Artikel ->tanggal_terbit =$req->tanggal;
+        artikel::create([
+            'Nama_Artikel' => $filename,
+            'Jenis' => $req->JenisFile,
+            'tanggal_terbit' => $req->tanggal
+        ]);
     	return redirect('data_file/'.$file -> getClientOriginalName());
     }
 
     function tambah_data(Request $req)
     {
-    	$Artikel = new Artikel
-    	$Artikel ->nama=$req->Nama_Artikel
-    	$Artikel ->JenisFile=$req->Jenis
-    	$Artikel ->tanggal=$req->tanggal_terbit
+    	
     }
 }
