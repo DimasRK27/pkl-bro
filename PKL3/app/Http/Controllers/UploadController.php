@@ -9,6 +9,8 @@ class UploadController extends Controller
     //
     function upload(Request $req)
     {
-    	return $req->file('file')->store('docs');
+        $file = $req->file('file');
+        $file -> move('data_file', $file -> getClientOriginalName());
+    	return redirect('data_file/'.$file -> getClientOriginalName());
     }
 }
