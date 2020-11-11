@@ -133,7 +133,7 @@
                   <div class="form-group">
 
                     <p>Nama File : 
-                    <input type="text" class="form-control" id="">
+                    <input type="text" class="form-control" placeholder="Masukan Nama File" id="" name="nama">
                     </p>
                     <br>
                   </div>
@@ -150,7 +150,7 @@
 
                   <div>
                     <p>Tanggal Penerbitan</p>
-                    <input type="date" id="datepicker">
+                    <input type="date" id="datepicker" name="tanggal">
                     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
             <link rel="stylesheet" href="/resources/demos/style.css">
                   </div>
